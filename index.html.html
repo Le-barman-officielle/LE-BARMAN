@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page officielle de LE BARMAN, retrouvée après un piratage.">
+    <title>LE BARMAN</title>
+    <link rel="icon" href="chemin/vers/ton-favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <style>
+        /* Variables CSS pour les couleurs */
+        :root {
+            --primary-color: #ff0000;
+            --background-color: #111;
+            --text-color: #00ff00;
+            --error-color: #ff3300; /* Couleur d'erreur */
+            --border-color: #ff6600;
+        }
+
+        /* Style général de la page */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Hauteur totale */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow-y: auto; /* Permet de défiler si le contenu dépasse */
+        }
+
+        /* Style du conteneur principal */
+        .container {
+            background: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
+            border: 2px solid var(--border-color); /* Bordure rouge-orange */
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Ombre rouge autour du conteneur */
+            margin-top: 50px; /* Espace en haut */
+            position: relative;
+        }
+
+        /* Style du titre principal avec effet de clignotement */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--primary-color);
+            animation: blink 1s infinite, glitch 0.3s infinite; /* Clignotement et effet de glitch */
+            position: relative;
+        }
+
+        /* Animation pour faire clignoter le texte */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Effet "Glitch" pour simuler le piratage */
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 0 var(--error-color), -2px 0 var(--error-color), 0 2px var(--error-color), 0 -2px var(--error-color);
+                transform: translateX(0);
+            }
+            50% {
+                text-shadow: 2px 0 var(--error-color), -2px 0 var(--error-color), 0 2px var(--error-color), 0 -2px var(--error-color);
+                transform: translateX(-10px);
+            }
+            100% {
+                text-shadow: 2px 0 var(--error-color), -2px 0 var(--error-color), 0 2px var(--error-color), 0 -2px var(--error-color);
+                transform: translateX(0);
+            }
+        }
+
+        /* Style de l'image (réduction de taille) */
+        .cover {
+            width: 60%; /* Réduction de la largeur de l'image */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px solid var(--primary-color);
+            transition: transform 0.3s ease-in-out; /* Transition pour hover */
+        }
+
+        /* Effet au survol de l'image */
+        .cover:hover {
+            transform: scale(1.05); /* Légère augmentation de la taille */
+        }
+
+        /* Style des liens */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px; /* Espace entre les liens et le reste */
+        }
+
+        .links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center; /* Aligner l'icône et le texte */
+            padding: 10px;
+            border: 2px solid var(--primary-color); /* Bordure pour un effet de type terminal */
+            background-color: #000;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Ombre verte autour de chaque lien */
+        }
+
+        /* Carré et point d'exclamation avant chaque lien (style terminal) */
+        .links a::before {
+            content: '!';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: #000;
+            color: var(--primary-color);
+            text-align: center;
+            line-height: 25px;
+            margin-right: 15px;
+            font-size: 1.5rem; /* Taille du point d'exclamation */
+            border: 2px solid var(--primary-color); /* Bordure pour style terminal */
+            border-radius: 5px; /* Coin arrondi */
+        }
+
+        /* Effet au survol des liens */
+        .links a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.7);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.9); /* Ombre plus forte au survol */
+        }
+
+        /* Style du footer */
+        footer {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LE BARMAN</h1>
+        <img src="https://i1.sndcdn.com/artworks-yqVG6vZKTcmX5hst-4KhR9A-t500x500.jpg" alt="Image de couverture de LE BARMAN" class="cover">
+        <div class="links">
+            <a href="https://youtube.com/@le_barman_officielle" target="_blank" aria-label="Page YouTube de LE BARMAN">YouTube</a>
+            <a href="https://www.tiktok.com/@1le_barman" target="_blank" aria-label="Page TikTok de LE BARMAN">TikTok</a>
+            <a href="https://www.twitch.tv/le_barman_gdc_rec_room" target="_blank" aria-label="Page Twitch de LE BARMAN">Twitch</a>
+            <a href="https://github.com/Le-barman-officielle" target="_blank" aria-label="Page GitHub de LE BARMAN">GitHub</a>
+            <a href="https://le-barman-officielle.github.io/DISCORD-SERVER/" target="_blank" aria-label="Page Discord de LE BARMAN">Server Discord</a>
+        </div>
+    </div>
+
+    <!-- Footer avec copyright -->
+    <footer>
+        <p>&copy; 2025 LE BARMAN. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
